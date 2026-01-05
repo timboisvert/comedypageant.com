@@ -1,5 +1,15 @@
 <section class="split">
     <div class="left">
+        <div class="soon-banner" role="region" aria-label="Next show">
+            <span class="soon-text">Next show: January 16 @ 7PM</span>
+            <a
+                href="https://www.tickettailor.com/events/cocorunseverything/1878177?ref=website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="buy-mini">Buy Tickets</a
+            >
+        </div>
+
         <img
             src="/images/comedypageant.png"
             alt="Comedy Pageant poster"

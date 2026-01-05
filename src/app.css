@@ -42,8 +42,10 @@ main {
 .split .left {
     background: #000;
     color: #fff;
-    align-items: center; /* center poster and text horizontally */
-    justify-content: flex-start; /* top-align content */
+    align-items: center;
+    /* center poster and text horizontally */
+    justify-content: flex-start;
+    /* top-align content */
     padding-left: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -53,15 +55,21 @@ main {
 .split .right {
     background: #fff;
     color: #000;
-    align-items: center; /* keep right content centered horizontally */
-    justify-content: flex-start; /* top-align content */
+    align-items: center;
+    /* keep right content centered horizontally */
+    justify-content: flex-start;
+    /* top-align content */
 }
 
 /* left poster flush */
-.split .left .poster { margin-left: 0; }
+.split .left .poster {
+    margin-left: 0;
+}
 
 /* left text aligns to poster */
-.info { text-align: left; }
+.info {
+    text-align: left;
+}
 
 /* Poster / content */
 .poster {
@@ -69,119 +77,213 @@ main {
     height: auto;
     display: block;
     margin-bottom: 1.25rem;
-    max-height: 80vh; /* prevent poster from overflowing vertically */
+    max-height: 80vh;
+    /* prevent poster from overflowing vertically */
 }
 
 /* left poster should be visually larger and use available height */
+.split .left {
+    position: relative;
+}
+
 .split .left .poster {
     width: auto;
     max-width: 100%;
-    max-height: calc(100vh - 12rem); /* allow poster to grow without overflow */
+    max-height: calc(100vh - 12rem);
+    /* allow poster to grow without overflow */
     object-fit: contain;
     margin-left: 0;
     display: block;
 }
 
 /* right poster kept slightly smaller so the left poster dominates */
-.split .right .poster { max-width: 78%; }
+.split .right .poster {
+    max-width: 78%;
+}
 
 
 .info {
     text-align: left;
     max-width: 36rem;
-    margin-top: 1.25rem; /* space between poster and text */
+    margin-top: 1.25rem;
+    /* space between poster and text */
 }
 
 /* Left column centers its info block */
-.split .left .info { text-align: center; }
-.split .left .info p { font-size: 1.12rem; font-weight: 700; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+.split .left .info {
+    text-align: center;
+}
+
+.split .left .info p {
+    font-size: 1.12rem;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
 
 /* Center the buy button in the left info block */
-.split .left .info .buy { display: block; margin: 1rem auto 0; }
+.split .left .info .buy {
+    display: block;
+    margin: 1rem auto 0;
+}
 
 /* Make sure posters can grow if space allows */
-.split .left .poster { max-height: calc(100vh - 12rem); object-fit: contain; }
-.split .right .poster { max-width: 78%; }
-
-
-.buy {
-    position: relative;
-    display: inline-block;
-    min-width: 160px;
-    padding: 0.9rem 1.6rem;
-    background: linear-gradient(180deg, #0a0a0a, #222222);
-    color: #f8f7f5;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 0.98rem;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    border-radius: 8px;
-    text-transform: none;
-    border: 4px solid #d9d9d9;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65), inset 0 3px 0 rgba(255, 255, 255, 0.02);
-    transition: transform 180ms ease, box-shadow 180ms ease;
-    overflow: hidden;
+.split .left .poster {
+    max-height: calc(100vh - 12rem);
+    object-fit: contain;
 }
+
+.split .right .poster {
+    max-width: 78%;
+}
+
 
 .buy {
     display: inline-block;
     background: #fff;
     color: #000;
-    min-width: 200px;
-    padding: 0.75rem 1.2rem;
+    min-width: 220px;
+    padding: 0.9rem 1.6rem;
     border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.12);
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 800;
     font-size: 1.05rem;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
 .buy:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
 }
 
-.buy:active { transform: translateY(0); }
+.buy:active {
+    transform: translateY(0);
+}
 
-.buy:focus { outline: none; box-shadow: 0 0 0 6px rgba(0,0,0,0.06); }
+.buy:focus {
+    outline: none;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.06);
+}
 
 @media (max-width: 540px) {
-    .buy { min-width: 160px; padding: 0.6rem 1rem; font-size: 1rem; }
-} 
+    .buy {
+        min-width: 160px;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+}
 
-.and { display: none; }
+/* (normalized .buy continued) ensure .label uses same weight */
+.buy .label {
+    font-family: inherit;
+    font-weight: 800;
+    font-size: inherit;
+    display: inline-block;
+}
+
+.buy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.buy:active {
+    transform: translateY(0);
+}
+
+.buy:focus {
+    outline: none;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 540px) {
+    .buy {
+        min-width: 160px;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+.soon-banner {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.98);
+    color: #000;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    display: inline-flex;
+    gap: 0.75rem;
+    align-items: center;
+    z-index: 40;
+}
+
+.soon-text {
+    font-weight: 700;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+}
+
+.buy-mini {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .soon-banner {
+        position: static;
+        margin-bottom: 0.85rem;
+        box-shadow: none;
+        justify-content: center;
+    }
+}
+
+.and {
+    display: none;
+}
 
 @media (min-width: 769px) {
-  .and {
-    display: inline-flex;
-    position: absolute;
-    left: 50%;
-    top: 300px;
-    transform: translateX(-50%) rotate(-30deg);
-    background: #F7DB2F;
-    color: #000;
-    padding: 0.45rem 0.8rem;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    font-weight: 800;
-    font-size: 1.6rem;
-    letter-spacing: 0.4px;
-    border: none;
-    border-radius: 6px;
-    z-index: 20;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
-    align-items: center;
-    justify-content: center;
-  }
+    .and {
+        display: inline-flex;
+        position: absolute;
+        left: 50%;
+        top: 300px;
+        transform: translateX(-50%) rotate(-30deg);
+        background: #F7DB2F;
+        color: #000;
+        padding: 0.45rem 0.8rem;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 1.6rem;
+        letter-spacing: 0.4px;
+        border: none;
+        border-radius: 6px;
+        z-index: 20;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+        align-items: center;
+        justify-content: center;
+    }
 
-  /* slightly reduce left padding on narrower desktops */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .split .left { padding-left: 4rem; }
-    .and { font-size: 1.4rem; top: 170px; }
-  }
+    /* slightly reduce left padding on narrower desktops */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .split .left {
+            padding-left: 4rem;
+        }
+
+        .and {
+            font-size: 1.4rem;
+            top: 170px;
+        }
+    }
 }
 
 /* Yellow band */
