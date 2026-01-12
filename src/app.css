@@ -59,6 +59,27 @@ main {
     /* keep right content centered horizontally */
     justify-content: flex-start;
     /* top-align content */
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 1.25rem;
+}
+
+/* Right column centers its info block */
+.split .right .info {
+    text-align: center;
+}
+
+.split .right .info p {
+    font-size: 1.12rem;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Center the buy button in the right info block */
+.split .right .info .buy {
+    display: block;
+    margin: 1rem auto 0;
 }
 
 /* left poster flush */
@@ -240,6 +261,57 @@ main {
 
 @media (max-width: 768px) {
     .soon-banner {
+        position: static;
+        margin-bottom: 0.85rem;
+        box-shadow: none;
+        justify-content: center;
+    }
+}
+
+.workshop-banner {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.98);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    display: inline-flex;
+    gap: 0.75rem;
+    align-items: center;
+    z-index: 40;
+}
+
+.workshop-text {
+    font-weight: 700;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+}
+
+.signup-mini {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.buy-dark {
+    background: #000;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.buy-dark:hover {
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .workshop-banner {
         position: static;
         margin-bottom: 0.85rem;
         box-shadow: none;

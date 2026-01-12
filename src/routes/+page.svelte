@@ -48,11 +48,39 @@
     <div class="and">AND</div>
 
     <div class="right">
+        <div class="workshop-banner" role="region" aria-label="Weekly workshop">
+            <span class="workshop-text">Every Monday</span>
+            <a
+                href="https://www.cocoscout.com/s/TUG0J"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="signup-mini">Sign Up</a
+            >
+        </div>
+
         <img
             src="/images/short-form-improv-workshop.png"
             alt="Short-form improv workshop poster"
             class="poster"
         />
+        <div class="info">
+            <p>
+                Learn the games from the show! Join our weekly short-form improv workshop.
+            </p>
+
+            <p>
+                Whether you're a beginner or experienced improviser, come play, practice, and have fun!
+            </p>
+
+            <p>
+                <a
+                    href="https://www.cocoscout.com/s/TUG0J"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy buy-dark"><span class="label">Sign Up</span></a
+                >
+            </p>
+        </div>
     </div>
 </section>
 
